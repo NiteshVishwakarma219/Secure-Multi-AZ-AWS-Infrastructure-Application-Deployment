@@ -4,6 +4,8 @@
 
 ### A production-grade, defense-in-depth AWS infrastructure provisioned entirely with Terraform
 
+Live Demo :  https://www.nitesh.shop
+
 Deploys and runs **NexOps EEMS** — a containerized React + Node.js/Prisma + PostgreSQL application — on a self-healing, auto-scaling, multi-layer-secured AWS backbone, with remote state, encrypted secrets, automated backups, and full audit/compliance tooling wired in from day one.
 
 [![Terraform](https://img.shields.io/badge/Terraform-1.6+-844FBA?style=for-the-badge&logo=terraform&logoColor=white)](https://www.terraform.io/)
