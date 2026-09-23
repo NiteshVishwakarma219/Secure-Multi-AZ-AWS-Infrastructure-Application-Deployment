@@ -1,0 +1,32 @@
+aws_region  = "ap-south-1"
+aws_profile = "nitesh-terraform"
+
+project_name = "enterprise-cloud-security-platform"
+environment  = "production"
+azs          = ["ap-south-1a", "ap-south-1b"]
+
+vpc_cidr = "10.0.0.0/16"
+public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+private_app_subnet_cidrs = ["10.0.11.0/24", "10.0.12.0/24"]
+private_db_subnet_cidrs = ["10.0.21.0/24", "10.0.22.0/24"]
+
+single_nat_gateway = true
+
+domain_name = "nitesh.shop"
+create_route53_zone = false
+
+# Leave empty if you do not want email alarm subscriptions yet.
+alarm_email = ""
+alarm_phone_number = "" # e.g. "+15551234567" -- set this to also get SMS alerts
+
+db_username = "eems_admin"
+db_password = "CHANGE_ME"
+db_multi_az = false
+
+asg_min_size = 2
+asg_max_size = 4
+asg_desired_capacity = 2
+
+enable_guardduty = true
+enable_security_hub = true
+enable_config = true

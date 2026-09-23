@@ -1,0 +1,14 @@
+# Configure remote state only after the state bucket AND the
+# DynamoDB lock table exist (see ../bootstrap).
+# Then rename this file to backend.tf and run:
+# terraform init -migrate-state
+
+terraform {
+  backend "s3" {
+    bucket         = "YOUR-TERRAFORM-STATE-BUCKET"
+    key            = "enterprise-cloud-security-platform/terraform.tfstate"
+    region         = "ap-south-1"
+    encrypt        = true
+    dynamodb_table = "YOUR-TERRAFORM-LOCKS-TABLE"
+  }
+}
